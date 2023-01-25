@@ -1,0 +1,12 @@
+.question_items{
+   
+        border: 1px solid #4c4d4f;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+    
+}
+.disabled {
+    pointer-events:none; 
+    opacity:0.6; 
+}        
