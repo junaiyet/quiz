@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import './QuestionItem.css'
 import {AiFillEye} from 'react-icons/ai'
-const QuestionItem = ({ques}) => {
+const QuestionItem = ({ques,wrongAnswer,rightAnswer}) => {
     const [currect, setCurrect] = useState(null);
     const [isDesable, setIsDisable] =useState(false)
     const {question,options,correctAnswer} = ques
-    console.log(currect)
     const handleCurectAnswer =(answer)=>{
         setIsDisable(true)
         if(answer === correctAnswer){
+           rightAnswer()
             return  setCurrect(true)
         }
+        wrongAnswer()
         return setCurrect(false)
     }
   const handleAnswer =()=>{
